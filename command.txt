@@ -1,0 +1,31 @@
+docker login --username=xingjinpeng3207 registry.cn-beijing.aliyuncs.com
+docker pull registry.cn-beijing.aliyuncs.com/excellent3207/redis5:v1
+docker pull registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v1
+
+docker network create --driver bridge nginx_php_net
+
+docker run -itd -v /Users/xingjinpeng/Documents/docker/redis5/conf:/usr/local/etc/redis -v /Users/xingjinpeng/Documents/docker/redis5/data:/data -v /etc/localtime:/etc/localtime -p 6379:6379 --network=nginx_php_net --name=redis_host registry.cn-beijing.aliyuncs.com/excellent3207/redis5:v1
+
+docker run -itd -v /Users/xingjinpeng/Documents/docker/php:/usr/local/etc -v /Users/xingjinpeng/Documents/gitsource:/opt/web -v /etc/localtime:/etc/localtime --network=nginx_php_net --name=php_host registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
+
+docker run -itd -p 18088:80 -v /Users/xingjinpeng/Documents/docker/nginx:/etc/nginx -v /Users/xingjinpeng/Documents/gitsource:/opt/web -v /etc/localtime:/etc/localtime --network=nginx_php_net --name=nginx_host registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v1
+
+
+docker run -itd -v /Users/xingjinpeng/Documents/docker/php:/usr/local/etc -v /Users/xingjinpeng/Documents/gitsource:/opt/web -v /etc/localtime:/etc/localtime --network=nginx_php_net --name=php_host2 registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
+
+
+docker run -itd -p 18089:80 -v /Users/xingjinpeng/Documents/docker/nginx2:/etc/nginx -v /Users/xingjinpeng/Documents/gitsource:/opt/web -v /etc/localtime:/etc/localtime --network=nginx_php_net --name=nginx_host2 registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v1
+
+
+先创建php容器，nginx容器才能访问php的cgi
+
+docker build -t php7.2 . 根据dockerfile创建php镜像
+
+四个镜像在同一网桥nginx_php_net下，然后先运行php容器，在运行nginx容器，这样nginx才能访问php
+
+mac下时间同步有问题，ubuntu没问题
+
+文件路径根据实际需要更改 
+
+
+
