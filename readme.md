@@ -16,6 +16,8 @@ docker pull registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
 在docker-compose.yml中：
 修改项目源码路径值本地路径
 
+注意：要修改nginx的fastcgi的主机名为php的host
+
 在此目录下，执行:
 docker-compose -f docker-compose.yml up
 批量创建容器
