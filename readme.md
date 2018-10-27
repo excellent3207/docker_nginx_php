@@ -13,6 +13,9 @@ docker pull registry.cn-beijing.aliyuncs.com/excellent3207/redis5:v1
 docker pull registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v1
 docker pull registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
 
+在docker-compose.yml中：
+修改项目源码路径值本地路径
+
 在此目录下，执行:
 docker-compose -f docker-compose.yml up
 批量创建容器
