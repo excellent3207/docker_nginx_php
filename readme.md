@@ -1,3 +1,5 @@
+现在此目录：git clone -b cbs_env https://github.com/excellent3207/docker_nginx_php.git /var/www/cbs_env
+
 下载docker环境部署文件和配置
 curl -o /var/docker_nginx_php.zip http://xjp-software.oss-cn-beijing.aliyuncs.com/docker_nginx_php.zip \
 && unzip -n -d /var/www /var/docker_nginx_php.zip
