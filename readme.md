@@ -5,7 +5,7 @@ docker login --username=xingjinpeng3207 registry.cn-beijing.aliyuncs.com
 
 下载镜像
 docker pull registry.cn-beijing.aliyuncs.com/excellent3207/redis5:v1
-docker pull registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v1
+docker pull registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
 docker pull registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
 
 在docker-compose.yml中：
