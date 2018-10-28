@@ -1,12 +1,5 @@
 现在此目录：git clone -b syh_env https://github.com/excellent3207/docker_nginx_php.git /var/www/syh_env
 
-下载docker环境部署文件和配置
-curl -o /var/docker_nginx_php.zip http://xjp-software.oss-cn-beijing.aliyuncs.com/docker_nginx_php.zip \
-&& unzip -n -d /var/www /var/docker_nginx_php.zip
-
-本地环境，如果是parallel，执行下面命令，讲项目源文件做一个软连接
-ln -s /media/psf/gitsource /var/www/docker_nginx_php/web
-
 登录阿里云
 docker login --username=xingjinpeng3207 registry.cn-beijing.aliyuncs.com
 
