@@ -21,9 +21,9 @@ docker pull registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
 注意：要修改nginx的fastcgi的主机名为php的host以及项目源码路径
 
 在此目录下，执行:
-docker-compose -f docker-compose.yml up
+docker-compose -f docker-compose.yml up -d
 或本地paralle环境，需要修改项目目录：
-docker-compose -f docker-compose-local.yml up
+docker-compose -f docker-compose-local.yml up -d
 批量创建容器
 
 此目录下文件介绍：
