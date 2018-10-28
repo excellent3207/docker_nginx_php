@@ -23,3 +23,5 @@ docker-compose -f docker-compose-local.yml up -d
 php7.2 下面包括php配置文件，和docker php配置文件同步
 nginx1.15.5 包括conf1..配置文件
 redis5 包括data数据文件，和conf配置文件
+
+注意：要修改nginx的配置，特别是域名和端口
