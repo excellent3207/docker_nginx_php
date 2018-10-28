@@ -22,6 +22,21 @@ services:
       - /etc/localtime:/etc/localtime
     networks:
       - nginx_php_net
+  nginx:
+    hostname: nginx_host
+    image: registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v1
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx1.15.5/conf1:/etc/nginx
+      - ./web:/opt/web
+      - /etc/localtime:/etc/localtime
+    networks:
+      - nginx_php_net
+    links:
+      - "php:php_host"
+      - "php2:php_host2"
   redis:
     hostname: redis_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/redis5:v1
