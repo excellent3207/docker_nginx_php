@@ -4,18 +4,7 @@ services:
     hostname: php_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
     ports:
-   	  - 19000:9000
-    volumes:
-      - ./php7.2/conf:/usr/local/etc
-      - ./web:/opt/web
-      - /etc/localtime:/etc/localtime
-    networks:
-      - nginx_php_net
-  php2:
-    hostname: php_host2
-    image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
-    ports:
-   	  - 29000:9000
+   	  - 9000:9000
     volumes:
       - ./php7.2/conf:/usr/local/etc
       - ./web:/opt/web
