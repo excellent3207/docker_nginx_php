@@ -22,7 +22,7 @@ docker pull registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
 
 在此目录下，执行:
 docker-compose -f docker-compose.yml up
-或本地
+或本地paralle环境，需要修改项目目录：
 docker-compose -f docker-compose-local.yml up
 批量创建容器
 
