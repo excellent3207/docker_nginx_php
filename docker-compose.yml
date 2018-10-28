@@ -11,7 +11,7 @@ services:
       - nginx_php_net
   nginx:
     hostname: nginx_host
-    image: registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v1
+    image: registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
     ports:
       - 18088:18088
       - 18089:18089
