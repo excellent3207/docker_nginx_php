@@ -1,6 +1,6 @@
 注意：没有nginx和redis容器，只有php容器，暴露9000端口给外部
 
-现在此目录：git clone -b syh_env https://github.com/excellent3207/docker_nginx_php.git /var/www/syh_env
+现在此目录：git clone -b cbs_env_slim https://github.com/excellent3207/docker_nginx_php.git /var/www/cbs_env_slim
 
 登录阿里云
 docker login --username=xingjinpeng3207 registry.cn-beijing.aliyuncs.com
