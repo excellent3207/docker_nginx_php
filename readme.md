@@ -1,18 +1,11 @@
+注意：没有nginx和redis容器，只有php容器，暴露9000端口给外部
+
 现在此目录：git clone -b syh_env https://github.com/excellent3207/docker_nginx_php.git /var/www/syh_env
-
-下载docker环境部署文件和配置
-curl -o /var/docker_nginx_php.zip http://xjp-software.oss-cn-beijing.aliyuncs.com/docker_nginx_php.zip \
-&& unzip -n -d /var/www /var/docker_nginx_php.zip
-
-本地环境，如果是parallel，执行下面命令，讲项目源文件做一个软连接
-ln -s /media/psf/gitsource /var/www/docker_nginx_php/web
 
 登录阿里云
 docker login --username=xingjinpeng3207 registry.cn-beijing.aliyuncs.com
 
 下载镜像
-docker pull registry.cn-beijing.aliyuncs.com/excellent3207/redis5:v1
-docker pull registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v1
 docker pull registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
 
 在docker-compose.yml中：
@@ -28,5 +21,3 @@ docker-compose -f docker-compose-local.yml up -d
 
 此目录下文件介绍：
 php7.2 下面包括php配置文件，和docker php配置文件同步
-nginx1.15.5 包括conf1..配置文件
-redis5 包括data数据文件，和conf配置文件
