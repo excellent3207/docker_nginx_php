@@ -23,7 +23,7 @@ services:
       - nginx_php_net
     links:
       - "php:php_host"
-      - "php:php_host2"
+      - "php2:php_host2"
   php2:
     hostname: php_host2
     image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
