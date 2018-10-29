@@ -1,7 +1,7 @@
 version: '3'
 services:
   php:
-    hostname: php_host
+    container_name: cbs_php_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
     volumes:
       - ./php7.2/conf:/usr/local/etc
@@ -10,7 +10,7 @@ services:
     networks:
       - cbs_net
   nginx:
-    hostname: nginx_host
+    container_name: cbs_nginx_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
     ports:
       - 10080:10080
@@ -22,10 +22,8 @@ services:
       - /etc/localtime:/etc/localtime
     networks:
       - cbs_net
-    links:
-      - "php:php_host"
   redis:
-    hostname: redis_host
+    container_name: cbs_redis_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/redis5:v1
     ports:
       - 6379:6379
