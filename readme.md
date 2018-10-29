@@ -23,3 +23,12 @@ docker-compose -f docker-compose-local.yml up -d
 php7.2 下面包括php配置文件，和docker php配置文件同步
 nginx1.15.5 包括conf1..配置文件
 redis5 包括data数据文件，和conf配置文件
+
+七、下载项目到/var/www/syh_env/web下：
+git clone -b syh_server1_6_0 git@101.200.122.79:/srv/syh_server.git /var/www/syh_env/web/syh_server1_6_0
+git clone -b syh_service1_6_0 git@101.200.122.79:/srv/syh_service.git /var/www/syh_env/web/syh_service1_6_0
+
+八、更改执行权限
+mkdir /var/www/syh_env/web/syh_server1_6_0/runtime
+docker exec server容器ID chown -R www-data:www-data /opt/web/syh_server1_6_0/runtime
+docker exec service容器ID chown -R www-data:www-data /opt/web/syh_service1_6_0/runtime
