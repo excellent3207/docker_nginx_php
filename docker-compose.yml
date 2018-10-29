@@ -1,7 +1,16 @@
 version: '3'
 services:
   php:
-    hostname: php_host
+    container_name: syh_php_host
+    image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
+    volumes:
+      - ./php7.2/conf:/usr/local/etc
+      - ./web:/opt/web
+      - /etc/localtime:/etc/localtime
+    networks:
+      - nginx_php_net
+  php2:
+    container_name: syh_php_host2
     image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
     volumes:
       - ./php7.2/conf:/usr/local/etc
@@ -10,7 +19,7 @@ services:
     networks:
       - nginx_php_net
   nginx:
-    hostname: nginx_host
+    container_name: syh_nginx_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
     ports:
       - 18088:18088
@@ -23,20 +32,8 @@ services:
       - /etc/localtime:/etc/localtime
     networks:
       - nginx_php_net
-    links:
-      - "php:php_host"
-      - "php:php_host2"
-  php2:
-    hostname: php_host2
-    image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
-    volumes:
-      - ./php7.2/conf:/usr/local/etc
-      - ./web:/opt/web
-      - /etc/localtime:/etc/localtime
-    networks:
-      - nginx_php_net
   redis:
-    hostname: redis_host
+    container_name: syh_redis_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/redis5:v1
     ports:
       - 6379:6379
