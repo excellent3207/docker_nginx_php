@@ -9,6 +9,15 @@ services:
       - /etc/localtime:/etc/localtime
     networks:
       - nginx_php_net
+  php2:
+    container_name: syh_php_host2
+    image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
+    volumes:
+      - ./php7.2/conf:/usr/local/etc
+      - /media/psf/gitsource:/opt/web
+      - /etc/localtime:/etc/localtime
+    networks:
+      - nginx_php_net
   nginx:
     container_name: syh_nginx_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
@@ -17,15 +26,6 @@ services:
       - 18089:18089
     volumes:
       - ./nginx1.15.5/conf1:/etc/nginx
-      - /media/psf/gitsource:/opt/web
-      - /etc/localtime:/etc/localtime
-    networks:
-      - nginx_php_net
-  php2:
-    container_name: syh_php_host2
-    image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
-    volumes:
-      - ./php7.2/conf:/usr/local/etc
       - /media/psf/gitsource:/opt/web
       - /etc/localtime:/etc/localtime
     networks:
