@@ -5,7 +5,7 @@ services:
     image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
     volumes:
       - ./php7.2/conf:/usr/local/etc
-      - /media/psf/gitsource:/opt/web
+      - /media/psf/git:/opt/web
       - /etc/localtime:/etc/localtime
     networks:
       - nginx_php_net
@@ -14,7 +14,7 @@ services:
     image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
     volumes:
       - ./php7.2/conf:/usr/local/etc
-      - /media/psf/gitsource:/opt/web
+      - /media/psf/git:/opt/web
       - /etc/localtime:/etc/localtime
     networks:
       - nginx_php_net
@@ -26,7 +26,7 @@ services:
       - 18089:18089
     volumes:
       - ./nginx1.15.5/conf1:/etc/nginx
-      - /media/psf/gitsource:/opt/web
+      - /media/psf/git:/opt/web
       - /etc/localtime:/etc/localtime
     networks:
       - nginx_php_net
