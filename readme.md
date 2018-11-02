@@ -30,5 +30,7 @@ git clone -b syh_service1_6_0 git@101.200.122.79:/srv/syh_service.git /var/www/s
 
 八、更改执行权限
 mkdir /var/www/syh_env/web/syh_server1_6_0/runtime
+mkdir /var/www/syh_env/web/syh_server1_6_0/public/wx_h5/qrcode
 docker exec server容器ID chown -R www-data:www-data /opt/web/syh_server1_6_0/runtime
+docker exec server容器ID chown -R www-data:www-data /opt/web/syh_server1_6_0/public/wx_h5/qrcode
 docker exec service容器ID chown -R www-data:www-data /opt/web/syh_service1_6_0/runtime
