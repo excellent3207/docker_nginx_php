@@ -2,7 +2,7 @@ version: '3'
 services:
   php:
     container_name: syh_php_host
-    image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
+    build: ./php7.2
     volumes:
       - ./php7.2/conf:/usr/local/etc
       - ./web:/opt/web
@@ -11,7 +11,7 @@ services:
       - syh_net
   php2:
     container_name: syh_php_host2
-    image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
+    build: ./php7.2
     volumes:
       - ./php7.2/conf:/usr/local/etc
       - ./web:/opt/web
