@@ -5,5 +5,6 @@ RUN apt-get update && \
     apt-get clean
     
 COPY ./docker-entrypoint /usr/local/bin/
+RUN chmod a+x /usr/local/bin/docker-entrypoint
 
 ENTRYPOINT ["docker-entrypoint"]
