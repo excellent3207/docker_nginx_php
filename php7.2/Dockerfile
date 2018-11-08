@@ -1,5 +1,4 @@
 FROM registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
-COPY ./sources.list /etc/apt/
 RUN apt-get update && \
     apt-get install -y --no-install-recommends cron && \
     rm -rf /var/lib/apt/lists/* && \
