@@ -8,6 +8,7 @@ services:
       - /media/psf/git:/opt/web
       - /etc/localtime:/etc/localtime
       - ./php7.2/crontab:/etc/crontab
+      - ./php7.2/docker-entrypoint.sh:/docker-entrypoint.sh
     networks:
       - syh_his_net
   nginx:
