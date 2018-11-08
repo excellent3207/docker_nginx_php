@@ -7,6 +7,8 @@ services:
       - ./php7.2/conf:/usr/local/etc
       - /media/psf/git:/opt/web
       - /etc/localtime:/etc/localtime
+      - ./php7.2/crontab:/etc/crontab
+      - ./php7.2/docker-entrypoint.sh:/etc/docker-entrypoint.sh
     networks:
       - syh_his_net
   nginx:
