@@ -1,4 +1,4 @@
-一、现在此目录：git clone -b cbs_env https://github.com/excellent3207/docker_nginx_php.git /var/www/cbs_env
+一、现在此目录：git clone -b syh_his_env https://github.com/excellent3207/docker_nginx_php.git /var/www/syh_his_env
 
 二、登录阿里云
 docker login --username=xingjinpeng3207 registry.cn-beijing.aliyuncs.com
@@ -24,9 +24,9 @@ php7.2 下面包括php配置文件，和docker php配置文件同步
 nginx1.15.5 包括conf1..配置文件
 redis5 包括data数据文件，和conf配置文件
 
-七、下载项目到/var/www/cbs_env/web下：
-git clone -b cbs_pro https://github.com/excellent3207/cbs_pro.git /var/www/cbs_env/web/cbs_pro
+七、下载项目到/var/www/syh_his_env/web下：
+git clone -b syh_his https://github.com/excellent3207/syh_his.git /var/www/syh_his_env/web/syh_his
 
 八、更改执行权限
-mkdir /var/www/cbs_env/web/cbs_pro/runtime
-docker exec php容器ID chown -R www-data:www-data /opt/web/cbs_pro/runtime
+mkdir /var/www/syh_his_env/web/syh_his/runtime
+docker exec php容器ID chown -R www-data:www-data /opt/web/syh_his/runtime
