@@ -30,3 +30,7 @@ git clone -b syh_his_1_0_0 git@101.200.122.79:/srv/syh_his.git /var/www/syh_his_
 八、更改执行权限
 mkdir /var/www/syh_his_env/web/syh_his/runtime
 docker exec php容器ID chown -R www-data:www-data /opt/web/syh_his/runtime
+
+
+注意：/php7.2/docker-entrypoint文件是docker CMD执行的命令
+    /php7.2/crontab是docker容器计划任务crontab的映射文件
