@@ -5,6 +5,6 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
     
-COPY docker-entrypoint /usr/local/bin/
+COPY ./docker-entrypoint /usr/local/bin/
 
 ENTRYPOINT ["docker-entrypoint"]
