@@ -2,11 +2,12 @@ version: '3'
 services:
   php:
     container_name: cbs_php_host
-    image: registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v1
+    build: ./php7.2
     volumes:
       - ./php7.2/conf:/usr/local/etc
       - ./web:/opt/web
       - /etc/localtime:/etc/localtime
+      - ./php7.2/crontab:/etc/crontab
     networks:
       - cbs_net
   nginx:
