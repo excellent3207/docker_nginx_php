@@ -25,7 +25,7 @@ nginx1.15.5 包括conf1..配置文件
 redis5 包括data数据文件，和conf配置文件
 
 七、下载项目到/var/www/syh_his_env/web下：
-git clone -b syh_his_1_0_0 git@101.200.122.79:/srv/syh_his.git /var/www/syh_his_env/web/syh_his
+git clone -b syh_his git@101.200.122.79:/srv/syh_his.git /var/www/syh_his_env/web/syh_his
 
 八、更改执行权限
 mkdir /var/www/syh_his_env/web/syh_his/runtime
