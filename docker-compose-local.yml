@@ -9,6 +9,8 @@ services:
       - /etc/localtime:/etc/localtime
     networks:
       - nginx_php_net
+    command:
+      - docker-entrypoint
   php2:
     container_name: syh_php_host2
     build: ./php7.2
@@ -18,6 +20,8 @@ services:
       - /etc/localtime:/etc/localtime
     networks:
       - nginx_php_net
+    command:
+      - docker-entrypoint
   nginx:
     container_name: syh_nginx_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
