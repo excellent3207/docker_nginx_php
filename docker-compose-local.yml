@@ -7,6 +7,7 @@ services:
       - ./php7.2/conf:/usr/local/etc
       - /media/psf/git:/opt/web
       - /etc/localtime:/etc/localtime
+      - ./php7.2/crontab:/etc/crontab
     networks:
       - nginx_php_net
     command:
@@ -18,6 +19,7 @@ services:
       - ./php7.2/conf:/usr/local/etc
       - /media/psf/git:/opt/web
       - /etc/localtime:/etc/localtime
+      - ./php7.2/crontab2:/etc/crontab
     networks:
       - nginx_php_net
     command:

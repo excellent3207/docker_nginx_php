@@ -7,6 +7,7 @@ services:
       - ./php7.2/conf:/usr/local/etc
       - ./web:/opt/web
       - /etc/localtime:/etc/localtime
+      - ./php7.2/crontab:/etc/crontab
     networks:
       - syh_net
     command:
@@ -18,6 +19,7 @@ services:
       - ./php7.2/conf:/usr/local/etc
       - ./web:/opt/web
       - /etc/localtime:/etc/localtime
+      - ./php7.2/crontab2:/etc/crontab
     networks:
       - syh_net
     command:
