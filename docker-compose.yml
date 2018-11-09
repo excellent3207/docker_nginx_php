@@ -10,6 +10,8 @@ services:
       - ./php7.2/crontab:/etc/crontab
     networks:
       - syh_his_net
+    command:
+      - docker-entrypoint
   nginx:
     container_name: syh_his_nginx_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
