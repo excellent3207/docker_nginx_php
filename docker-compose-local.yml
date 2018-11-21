@@ -8,7 +8,6 @@ services:
       - /media/psf/git:/opt/web
       - /etc/localtime:/etc/localtime
       - ./php7.2/crontab:/etc/crontab
-      - ./php7.2/sources.list:/etc/apt/sources.list
     networks:
       - syh_his_net
     command:
