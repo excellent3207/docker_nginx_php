@@ -1,4 +1,4 @@
-一、现在此目录：git clone -b syh_env https://github.com/excellent3207/docker_nginx_php.git /var/www/fengrong
+一、现在此目录：git clone -b fr_jieba https://github.com/excellent3207/docker_nginx_php.git /var/www/fr_jieba
 
 二、登录阿里云
 docker login --username=xingjinpeng3207 registry.cn-beijing.aliyuncs.com
@@ -25,8 +25,7 @@ nginx1.15.5 包括conf1..配置文件
 redis5 包括data数据文件，和conf配置文件
 
 七、下载项目到/var/www/syh_env/web下：
-git clone -b syh_server1_6_0 git@101.200.122.79:/srv/syh_server.git /var/www/syh_env/web/syh_server1_6_0
-git clone -b syh_service1_6_0 git@101.200.122.79:/srv/syh_service.git /var/www/syh_env/web/syh_service1_6_0
+git clone -b master http://120.27.188.111/root/jieba.git /var/www/fr_jieba
 
 八、更改执行权限
 mkdir /var/www/syh_env/web/syh_server1_6_0/runtime

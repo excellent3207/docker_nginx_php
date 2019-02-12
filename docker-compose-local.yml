@@ -1,7 +1,7 @@
 version: '3'
 services:
   php:
-    container_name: syh_php_host
+    container_name: fr_php_host
     build: ./php7.2
     volumes:
       - ./php7.2/conf:/usr/local/etc
@@ -9,23 +9,11 @@ services:
       - /etc/localtime:/etc/localtime
       - ./php7.2/crontab:/etc/crontab
     networks:
-      - nginx_php_net
-    command:
-      - docker-entrypoint
-  php2:
-    container_name: syh_php_host2
-    build: ./php7.2
-    volumes:
-      - ./php7.2/conf:/usr/local/etc
-      - /media/psf/git:/opt/web
-      - /etc/localtime:/etc/localtime
-      - ./php7.2/crontab2:/etc/crontab
-    networks:
-      - nginx_php_net
+      - fr_net
     command:
       - docker-entrypoint
   nginx:
-    container_name: syh_nginx_host
+    container_name: fr_nginx_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
     ports:
       - 18088:18088
@@ -35,9 +23,9 @@ services:
       - /media/psf/git:/opt/web
       - /etc/localtime:/etc/localtime
     networks:
-      - nginx_php_net
+      - fr_net
   redis:
-    container_name: syh_redis_host
+    container_name: fr_redis_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/redis5:v1
     ports:
       - 6379:6379
@@ -46,7 +34,7 @@ services:
       - ./redis5/data:/data
       - /etc/localtime:/etc/localtime
     networks:
-      - nginx_php_net
+      - fr_net
 networks:
-  nginx_php_net:
+  fr_net:
     driver: bridge
