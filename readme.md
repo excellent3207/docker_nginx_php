@@ -1,4 +1,4 @@
-一、现在此目录：git clone -b syh_env https://github.com/excellent3207/docker_nginx_php.git /var/www/fengrong
+一、现在此目录：git clone -b syh_env https://github.com/excellent3207/docker_nginx_php.git /var/www/syh_env
 
 二、登录阿里云
 docker login --username=xingjinpeng3207 registry.cn-beijing.aliyuncs.com
