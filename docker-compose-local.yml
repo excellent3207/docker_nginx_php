@@ -16,8 +16,7 @@ services:
     container_name: fr_nginx_host
     image: registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
     ports:
-      - 18088:18088
-      - 18089:18089
+      - 80:80
     volumes:
       - ./nginx1.15.5/conf1:/etc/nginx
       - /media/psf/git:/opt/web
