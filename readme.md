@@ -1,5 +1,4 @@
 一、现在此目录：git clone -b fr_jieba https://github.com/excellent3207/docker_nginx_php.git /var/www/fr_jieba
-dfdfd
 
 二、登录阿里云
 docker login --username=xingjinpeng3207 registry.cn-beijing.aliyuncs.com
