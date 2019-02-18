@@ -7,7 +7,6 @@ services:
       - ./php7.2/conf:/usr/local/etc
       - /media/psf/git:/opt/web
       - /etc/localtime:/etc/localtime
-      - ./php7.2/crontab:/etc/crontab
     networks:
       - fr_net
     command:
