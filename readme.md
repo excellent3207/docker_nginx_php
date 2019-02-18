@@ -1,4 +1,4 @@
-一、现在此目录：git clone -b fr_jieba https://github.com/excellent3207/docker_nginx_php.git /var/www/fr_jieba
+一、现在此目录：git clone -b php_swoole https://github.com/excellent3207/docker_nginx_php.git /var/www/路径名
 dfdfd
 
 二、登录阿里云
@@ -7,7 +7,7 @@ docker login --username=xingjinpeng3207 registry.cn-beijing.aliyuncs.com
 三、下载镜像
 docker pull registry.cn-beijing.aliyuncs.com/excellent3207/redis5:v1
 docker pull registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
-docker pull registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2:v2
+docker pull registry.cn-beijing.aliyuncs.com/excellent3207/php_swoole:v1
 
 四、在docker-compose.yml中：
 修改项目源码路径值本地路径
