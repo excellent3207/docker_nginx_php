@@ -11,7 +11,7 @@ RUN docker-php-ext-install sockets
 RUN apt-get update && apt-get install -y --no-install-recommends wget \
     && wget -O /tmp/swoole.tar.gz https://github.com/swoole/swoole-src/archive/v4.2.13.tar.gz \
     && /tmp/swoole \
-    && ar -xzf /tmp/swoole.tar.gz -C /tmp/swoole --strip-components=1
+    && ar -xzf /tmp/swoole.tar.gz -C /tmp/swoole --strip-components=1 \
     && mkdir /tmp/swoole
 WORKDIR /tmp/swoole
 RUN phpize && ./configure && make && make install && docker-php-ext-enable swoole
