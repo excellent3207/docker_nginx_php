@@ -3,6 +3,8 @@ services:
   php:
     container_name: fr_php_host
     build: ./php7.2
+    ports:
+      - 9501:9501
     volumes:
       - ./php7.2/conf:/usr/local/etc
       - /media/psf/git:/opt/web
