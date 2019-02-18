@@ -1,4 +1,4 @@
-一、现在此目录：git clone -b php_swoole https://github.com/excellent3207/docker_nginx_php.git /var/www/路径名
+一、现在此目录：git clone -b php_swoole https://github.com/excellent3207/docker_nginx_php.git /var/www/php_swoole
 dfdfd
 
 二、登录阿里云
