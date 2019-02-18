@@ -8,8 +8,7 @@ RUN echo "deb http://mirrors.163.com/debian/ jessie main non-free contrib" > /et
     && echo "deb-src http://mirrors.163.com/debian/ jessie-backports main non-free contrib" >> /etc/apt/sources.list \
     && echo "deb http://mirrors.163.com/debian-security/ jessie/updates main non-free contrib" >> /etc/apt/sources.list
 RUN docker-php-ext-install sockets
-RUN mkdir -p /tmp/swoole
-RUN apt-get update && apt-get install -y --no-install-recommends wget \
+RUN mkdir /tmp/swoole && apt-get update && apt-get install -y --no-install-recommends wget \
     && wget -O /tmp/swoole.tar.gz https://github.com/swoole/swoole-src/archive/v4.2.13.tar.gz \
     && tar -xzf /tmp/swoole.tar.gz -C /tmp/swoole --strip-components=1 \
 WORKDIR /tmp/swoole
