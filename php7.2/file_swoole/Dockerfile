@@ -15,3 +15,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends wget \
 WORKDIR /tmp/swoole
 RUN phpize && ./configure && make && make install && docker-php-ext-enable swoole
 RUN rm -rf /var/lib/apt/lists/* && rm -f /tmp/swoole.tar.gz && rm -r /tmp/swoole && apt-get purge -y --auto-remove wget
+RUN docker-php-ext-install zip
+COPY ./docker-entrypoint /usr/local/bin/
+RUN chmod a+x /usr/local/bin/docker-entrypoint
