@@ -1,4 +1,4 @@
-一、现在此目录：git clone -b fr_jieba https://github.com/excellent3207/docker_nginx_php.git /var/www/fr_jieba
+一、现在此目录：git clone -b my https://github.com/excellent3207/docker_nginx_php.git /var/www/my
 dfdfd
 
 二、登录阿里云
