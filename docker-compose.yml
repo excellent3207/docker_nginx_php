@@ -8,6 +8,7 @@ services:
       - ./web:/opt/web
       - /etc/localtime:/etc/localtime
       - ./php7.2/crontab:/etc/crontab
+      - /opt:/opt
     networks:
       - my_net
     command:
@@ -22,6 +23,7 @@ services:
       - ./nginx1.15.5/conf1:/etc/nginx
       - ./web:/opt/web
       - /etc/localtime:/etc/localtime
+      - /opt:/opt
     networks:
       - my_net
   redis:
