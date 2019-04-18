@@ -44,6 +44,8 @@ services:
         MYSQL_ROOT_PASSWORD: jian12345chi
     ports:
       - 3306:3306
+    volumes:
+      - ./mysql5.7/mysql:/var/lib/mysql
     networks:
       - my_net
 networks:
