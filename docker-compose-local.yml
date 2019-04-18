@@ -36,6 +36,18 @@ services:
       - /etc/localtime:/etc/localtime
     networks:
       - my_net
+  mysql:
+    container_name: my_mysql_host
+    build: ./mysql5.7
+    environment: 
+        MYSQL_ROOT_PASSWORD: jian12345chi
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql5.7/data:/var/lib/mysql
+      - ./mysql5.7/conf:/etc/mysql
+    networks:
+      - my_net
 networks:
   my_net:
     driver: bridge
