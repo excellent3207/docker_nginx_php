@@ -46,6 +46,7 @@ services:
       - 3306:3306
     volumes:
       - ./mysql5.7/mysql:/var/lib/mysql
+      - ./mysql5.7/conf:/etc/mysql/conf.d
     networks:
       - my_net
 networks:
