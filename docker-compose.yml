@@ -40,6 +40,7 @@ services:
   mysql:
     container_name: my_mysql_host
     image: registry.cn-beijing.aliyuncs.com/mengyunzhi/mysql:5.7
+    environment: MYSQL_ROOT_PASSWORD: jian12345chi
     ports:
       - 3306:3306
     volumes:
