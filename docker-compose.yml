@@ -39,7 +39,7 @@ services:
       - my_net
   mysql:
     container_name: my_mysql_host
-    build: ./mysql5.7
+    image: registry.cn-beijing.aliyuncs.com/mengyunzhi/mysql:5.7
     ports:
       - 3306:3306
     volumes:
