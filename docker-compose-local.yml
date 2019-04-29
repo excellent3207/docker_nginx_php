@@ -48,6 +48,16 @@ services:
       - ./mysql5.7/conf:/etc/mysql
     networks:
       - my_net
+  elasticsearch:
+    container_name: my_elasticsearch_host
+    build: ./elasticsearch
+    ports:
+      - 9200:9200
+      - 9300:9300
+    volumes:
+      - ./elasticsearch/data/:/usr/share/elasticsearch/data
+    networks:
+      - my_net
 networks:
   my_net:
     driver: bridge
