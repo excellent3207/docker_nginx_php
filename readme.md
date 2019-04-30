@@ -10,7 +10,8 @@ docker pull registry.cn-beijing.aliyuncs.com/excellent3207/nginx_1.15.5:v2
 docker pull registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2_swoole_4.2.13:v1
 docker pull registry.cn-beijing.aliyuncs.com/excellent3207/php_7.2_swoole_4.2.13:v1
 docker pull registry.cn-beijing.aliyuncs.com/excellent3207/mysql:5.7
-
+将docker-compose配置文件（.yml)更换成docker-compose.yml，
+（本地环境：删除conf.d,将conf.d.local替换成conf.d）
 四、在docker-compose.yml中：
 修改项目源码路径值本地路径
 
